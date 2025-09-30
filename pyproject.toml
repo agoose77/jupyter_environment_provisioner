@@ -1,0 +1,14 @@
+[project]
+name = "jupyter_environment_provisioner"
+version = "0.0.0"
+dependencies = [
+"jupyter_server>=2.1"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.hatch.build.targets.wheel.shared-data]
+"jupyter-config/jupyter_server_config.d" = "etc/jupyter/jupyter_server_config.d"
